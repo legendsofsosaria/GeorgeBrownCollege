@@ -17,12 +17,14 @@ done
 
 # Infinite loop, allows repetitive menu selection unless they select a valid choice
 # Allows selection in a menu for task 1, 2, and 3 by A/B/C (not case sensitive)
-# fourth case handles invalid user input
+# fourth case handles exiting, fifth case invalid user input
 for ((;;))
 do
 	echo -e "\nPress A or a to calculate triangular numbers "
 	echo -e "Press B or b to calculate numbers as products of successive numbers "
-    echo -e "Press C or c to generate sequence by formula\n"
+    echo -e "Press C or c to generate sequence by formula"
+    echo -e "Press E or e to exit"
+    echo
 	read -p "Enter your menu choice: " choice
 
 	case $choice in
@@ -32,6 +34,8 @@ do
         exit 1;;
 	    "C" | "c") echo -e "You chose task 3\n "
         . ./Task3.sh;;
+        "E" | "e") echo -e "You chose to exit. Goodbye."
+        exit 1;;
         *) echo -n "Invalid input! " ;;
 	esac
 done
