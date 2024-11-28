@@ -36,17 +36,23 @@ for ((n = n1; n <= n2; n++)); do
 done
 echo "${terms[@]}"
 
-
 # Calculate product of first and last terms
 first_term=$(( "$a * ($n1^3) + $b * $n1 + $c"))
 last_term=$(( "$a * ($n2^3) + $b * $n2 + $c"))
 product=$(( "$first_term * $last_term" | bc))
 echo "The product of the first and last terms is: $product"
 
-
 # Check if product is a multiple of 4
 if ((product % 4 == 0)); then
     echo "The product is a multiple of 4"
 else
     echo "The product is not a multiple of 4"
+fi
+
+# Prompt to complete another task
+read -p "Would you like to complete another task? (yes/no): " choice
+if [[ "$choice" == "yes" ]]; then
+    ./Menu.sh
+else
+    exit 0
 fi
