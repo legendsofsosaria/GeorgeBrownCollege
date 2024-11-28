@@ -30,16 +30,16 @@ fi
 # Print sequence terms
 echo "The terms of the sequence are:"
 terms=()
-for ((n = n1; n <= n2; n++)); do
-    term=$(( "$a * ($n^3) + $b * $n + $c"))
+for (( n = n1; n <= n2; n++ )); do
+    term=$(( "$a * ($n^3) + $b * $n + $c" ))
     terms+=("$term")
 done
 echo "${terms[@]}"
 
 # Calculate product of first and last terms
-first_term=$(( "$a * ($n1^3) + $b * $n1 + $c"))
-last_term=$(( "$a * ($n2^3) + $b * $n2 + $c"))
-product=$(( "$first_term * $last_term" | bc))
+first_term=$(( "$a * ($n1^3) + $b * $n1 + $c" ))
+last_term=$(( "$a * ($n2^3) + $b * $n2 + $c" ))
+product=$(( "$first_term * $last_term" ))
 echo "The product of the first and last terms is: $product"
 
 # Check if product is a multiple of 4
