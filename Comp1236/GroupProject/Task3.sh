@@ -48,11 +48,3 @@ if ((product % 4 == 0)); then
 else
     echo "The product is not a multiple of 4"
 fi
-
-# Prompt to complete another task
-read -p "Would you like to complete another task? (yes/no): " choice
-if [[ "$choice" == "yes" ]]; then
-    ./Menu.sh
-else
-    exit 0
-fi
