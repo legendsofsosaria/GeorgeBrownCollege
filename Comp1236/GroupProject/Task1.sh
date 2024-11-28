@@ -3,21 +3,20 @@
 # Get input from the user for min and max values
 read -p "Enter the minimum value: " min
 
-    if ((min <= 0))
-        then
-            echo "The minimum value cannot be negative. Please enter another value."
-            echo
-            read -p "Enter the minimum value: " min
-    fi
+    while [[ ! $min =~ ^[0-9]+$ || $min -le 0 ]]; do
+        echo "The minimum value must be a positive non-zero integer. Please enter another value."
+        echo
+        read -p "Enter the minimum value: " min
+    done
 
 read -p "Enter the maximum value: " max
 
-    if ((max <= 0 || max <= min))
-        then
-            echo "The maximum value cannot be negative and cannot be less than or equal to the minimum. Please enter another value."
+    while [[ ! $max =~ ^[0-9]+$ || $max -le 0 || $max -le $min ]]; do
+            echo "The maximum value cannot be less than or equal to the minimum."
+            echo "Please enter another value."
             echo
             read -p "Enter the maximum value: " max
-    fi
+    done
 echo
 
 # Initialize variables
