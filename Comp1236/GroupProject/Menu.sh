@@ -31,7 +31,7 @@ do
 	    "A" | "a") echo -e "You chose task 1\n " 
         . ./Task1.sh;;
         "B" | "b") echo -e "You chose task 2\n " 
-        exit 1;;
+        . ./Task2.sh;;
 	    "C" | "c") echo -e "You chose task 3\n "
         . ./Task3.sh;;
         "E" | "e") echo -e "You chose to exit. Goodbye."
