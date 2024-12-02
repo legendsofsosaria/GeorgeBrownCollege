@@ -43,7 +43,7 @@
     echo "The terms of the sequence are:"
     terms=()
     
-    for ((n = n1; n <= n2; n++ )); do
+    for (( n = n1; n <= n2; n++ )); do
         term=$(( $a * ($n**3) + $b * $n + $c ))
             terms+=("$term")
     done
@@ -61,7 +61,7 @@
 
 # Check if product is a multiple of 4
 
-    if ((product % 4 == 0)); then
+    if (( product % 4 == 0 )); then
 
         echo "The product is a multiple of 4."
     else
