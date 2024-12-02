@@ -1,16 +1,39 @@
 #!/bin/bash
   
-# Request user input
-read -p "Please provide the starting number for calculating the successive products: " start
-read -p "How many products do you wish to calculate? " num_products
-read -p "Enter a positive number to check if it is divisible by these products: " divisor
+  # Request user input with validation for non-negative values
+  while true; do
+    read -p "Please provide the starting number for calculating the successive products: " start
+    if [[ $start =~ ^[0-9]+$ ]]; then
+      break
+    else
+      echo "Please enter a valid non-negative number."
+    fi
+  done
 
-echo "Beginning the calculation of successive products, starting with $start..."
+  while true; do
+    read -p "How many products do you wish to calculate? " num_products
+    if [[ $num_products =~ ^[0-9]+$ ]] && (( num_products > 0 )); then
+      break
+    else
+      echo "Please enter a valid positive number."
+    fi
+  done
 
-# Initialize counter for loop iterations
-counter=1
+  while true; do
+    read -p "Enter a positive number to check if it is divisible by these products: " divisor
+    if [[ $divisor =~ ^[0-9]+$ ]] && (( divisor > 0 )); then
+      break
+    else
+      echo "Please enter a valid positive number."
+    fi
+  done
 
-while [[ $counter -le $num_products ]]; do
+  echo "Beginning the calculation of successive products, starting with $start..."
+
+  # Initialize counter for loop iterations
+  counter=1
+
+  while [[ $counter -le $num_products ]]; do
     # Compute the product of the current and next number
     product=$(( start * (start + 1) ))
 
@@ -28,4 +51,4 @@ while [[ $counter -le $num_products ]]; do
 
     # Move to the next iteration
     counter=$(( counter + 1 ))
-done
+  done
