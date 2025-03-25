@@ -21,6 +21,9 @@ Game1001/Week 3/LabExercise/Debug/LabExercise.vcxproj.FileListAbsolute.txt
 Game1001/Week 3/LabExercise/Debug/vc142.idb
 Game1001/Week 3/LabExercise/Debug/vc142.pdb
 
-./Comp1202/Assignment2/.vs/**
-./Comp1202/Assignment2/bin/**
-./Comp1202/Assignment2/obj/**
+# Ignore Visual Studio folders
+.vs/
+
+# Ignore build output folders
+bin/
+obj/
