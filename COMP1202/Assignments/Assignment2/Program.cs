@@ -4,15 +4,15 @@
 	{
 		public static string? Menu()
 		{
-			Console.WriteLine("1 ");
-			Console.WriteLine("2 ");
-			Console.WriteLine("3 ");
-			Console.WriteLine("4 ");
-			Console.WriteLine("5 ");
-			Console.WriteLine("6 ");
-			Console.WriteLine("7 ");
-			Console.WriteLine("8 ");
-			Console.WriteLine("9 ");
+			Console.WriteLine("1: Add Student");
+			Console.WriteLine("2: Add Course");
+			Console.WriteLine("3: Register Student to Course");
+			Console.WriteLine("4: Display All Students");
+			Console.WriteLine("5: Display All Courses");
+			Console.WriteLine("6: Display Registrations");
+			Console.WriteLine("7: Save Data");
+			Console.WriteLine("8: Load Data");
+			Console.WriteLine("9: Exit");
 			Console.WriteLine("Enter number 1-9: ");
 			return Console.ReadLine();
 		}
@@ -25,7 +25,7 @@
 				switch (choice)
 				{
 					case "1":
-						
+						College.AddStudent();
 						break;
 					case "2":
 						
