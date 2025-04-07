@@ -1,6 +1,6 @@
 ﻿namespace Assignment2
 {
-	internal class Courses
+	internal class Course
 	{
 	}
 }

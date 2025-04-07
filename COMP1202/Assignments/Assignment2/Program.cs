@@ -1,15 +1,17 @@
-﻿namespace Assignment2
+﻿using Assignment2;
+
+namespace Assignment2
 {
 	internal class Program
 	{
 		public static string? Menu()
 		{
-			Console.WriteLine("1: Add Student");
-			Console.WriteLine("2: Add Course");
+			Console.WriteLine("1: Add New Student");
+			Console.WriteLine("2: Add New Course");
 			Console.WriteLine("3: Register Student to Course");
 			Console.WriteLine("4: Display All Students");
 			Console.WriteLine("5: Display All Courses");
-			Console.WriteLine("6: Display Registrations");
+			Console.WriteLine("6: Display All Registrations");
 			Console.WriteLine("7: Save Data");
 			Console.WriteLine("8: Load Data");
 			Console.WriteLine("9: Exit");
@@ -19,25 +21,27 @@
 
 		static void Main(string[] args)
 		{
+			College college = new College();
+
 			while (true)
 			{
 				var choice = Menu();
 				switch (choice)
 				{
 					case "1":
-						College.AddStudent();
+						college.AddStudent();
 						break;
 					case "2":
-						
+						college.AddCourse();
 						break;
 					case "3":
-						
+
 						break;
 					case "4":
-						
+						college.DisplayStudents();
 						break;
 					case "5":
-						
+
 						break;
 					case "6":
 						break;
