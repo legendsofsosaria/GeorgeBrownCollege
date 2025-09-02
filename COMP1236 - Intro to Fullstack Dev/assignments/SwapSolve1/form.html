@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta Form</title>
+  <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+<body>
+    <header><img class="banner" src="2.jpg" alt="Bakery Items"></header>
+        <nav>
+          <ul id="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="form.html">Beta Sign-Up</a></li>
+          </ul>
+        </nav>
+    <img id ="logo" src="p.jpg" alt="Rolling Pin Reverie">
+    <form onsubmit="showAlert(event)">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your first name">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+      <label for="mailto">Email</label>
+      <input type="email" id="mailto" name="email" placeholder="email@address.com">
+
+      <input id="submit" type="submit" value="Submit">
+    </form>
+      <script>
+      function showAlert(event)
+      {
+        event.preventDefault();
+
+        alert("You have submitted your information for beta testing");
+      }
+    </script>
+    <footer>
+      <ul id="footer-items">
+        &#x1F382; &copy; Rolling Pin Reverie January 2025 &#x1F382;
+      </ul>
+    </footer>
+</body>
+</html>

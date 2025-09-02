@@ -1,0 +1,44 @@
+main
+{
+    display: grid;
+    height: 600px;
+    width: 100%;
+    grid-template: 100px 100px 200px / 150px 150px;
+    /*grid-template: repeat(2, 100px) / repeat(auto-fit, minmax(50px, 1fr)); */
+    /*grid-template: [lineA] 100px [lineB] 100px [lineC] 200px / [lineD] 150px 150px;*/
+    grid-gap: 10px 30px;
+    /*justify-content: end; !* Moves to the end of the horizontal axis *!*/
+    /*align-content: end; !* Moves to the end of the vertical axis *!*/
+    grid-template-areas:
+        "head head"
+        "nav other"
+        "nav other";
+}
+
+div
+{
+    background-color: cornflowerblue;
+}
+
+section
+{
+    background-color: bisque;
+}
+
+#header
+{
+    /*grid-column: 1 / 3;*/
+    grid-area: head;
+}
+
+#nav
+{
+    /*grid-row: 2 / 4;*/
+    /*grid-row: lineB / lineD;*/
+    grid-area: nav;
+}
+
+#other
+{
+    grid-area: other;
+}

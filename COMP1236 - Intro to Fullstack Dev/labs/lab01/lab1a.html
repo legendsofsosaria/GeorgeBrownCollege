@@ -1,0 +1,49 @@
+<!--
+ lab1a.html
+ Purpose: HTML semantic elements and connecting external layouts and CSS files
+ - All semantic elements are simply div underneath and have no special CSS or display
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab Week 1 A</title>
+    <script src="lab1a.js"></script> <!-- External JS file -->
+    <!-- Internal JS Code -->
+    <script>
+        // Define a username
+        let username = prompt("Please enter your username"); // ; now optional
+        // Print the username value out to the web page
+        document.write("Welcome: " + username);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a>Profile</a>
+            <a>Billing</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>Section 1 - Article 1</article>
+            <article>Section 1 - Article 2</article>
+            <article>Section 1 - Article 3</article>
+        </section>
+        <section>
+            <article>Section 2 - Article 1</article>
+            <article>Section 2 - Article 2</article>
+            <article>Section 2 - Article 3</article>
+        </section>
+        <aside>
+            Aside
+        </aside>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

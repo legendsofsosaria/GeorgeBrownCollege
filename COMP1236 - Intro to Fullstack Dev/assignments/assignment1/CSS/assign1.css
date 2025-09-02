@@ -1,0 +1,195 @@
+/* Import fonts from google */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase');
+
+/* Main background color */
+body
+{
+    background-color: #F0EDEE;
+}
+
+main
+{
+    font: bold 1.1vw 'Cormorant Unicase', serif;
+    color: #0A090C;
+    width: 100%;
+    max-width: 960px;
+}
+
+/* Formatting for header and footer */
+header, footer
+{
+    width: 100%;
+    max-width: 960px;
+    font: 1.1vw 'Julius Sans One', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Use a flexbox to create a horizontal layout for nav links and footer links */
+nav, #footer-items
+{
+    box-sizing: border-box;
+    height: 100px;
+    width: 960px;
+    border: 4px double #E15A97;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-items li
+{
+    list-style-type: none;
+    padding: 10px;
+}
+
+#footer-items li:last-child
+{
+    padding-right: 20px;
+}
+
+#nav-links
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#nav-links li
+{
+    padding: 20px;
+    align-content: center;
+}
+
+/* Home link should sit near left of nav bar */
+#nav-links li:first-child
+{
+    margin-left: 20px;
+    align-content: center;
+    margin-right: auto;
+}
+
+a:link, a:visited
+{
+    color: #0A090C;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px;
+}
+
+/* Hover effects for links */
+#nav-links a:hover, #footer-items a:hover
+{
+    transform: scale(1,1) translateY(0px);
+    transition: all 1.2s;
+    font-size: 1.3vw;
+}
+
+/* Grid layout for container */
+#course-grid
+{
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-gap: 15px 10px;
+}
+/* Grid layout for the course items */
+.course_item
+{
+    max-width: 100%;
+    display: flex;
+    border: 3px double #E15A97;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "image number"
+        "image title"
+        "image description";
+}
+
+/* Force the course title to take up 4 grid columns, top section of grid */
+#page_title
+{
+    grid-column: 1 / -1;
+}
+
+.course_image
+{
+    grid-area: image;
+    border: 4px double #E15A97;
+    margin: 40px 20px;
+    border-radius: 25px;
+    width: 125px;
+    height: auto;
+}
+
+.course_number
+{
+    grid-area: number;
+}
+
+.course_title
+{
+    grid-area: title;
+}
+
+.course_description
+{
+    grid-area: description;
+}
+
+/* Two column layout for screens below 640px
+  Override padding for condensed layout */
+@media all and (max-width: 640px)
+{
+    #course-grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
+        width: 70%;
+    }
+
+    footer
+    {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Dynamically adjust width with auto, override padding */
+    #footer-items, nav
+    {
+        justify-content: center;
+        width: auto;
+        padding: 0;
+    }
+
+    /* Shrink down course image to have fluidity with layout */
+    .course_image
+    {
+        max-width: 50%;
+    }
+}
+
+/* One column layout for screen below 400px */
+@media all and (max-width: 400px)
+{
+    #course-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    /* Limit the size of the course items to avoid weird empty space when layout gets small */
+    .course_item
+    {
+        max-width: 40%;
+        text-align: center;
+    }
+}

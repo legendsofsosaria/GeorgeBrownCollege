@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF0F5;
+    color: #7E2C5B;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: plum;
+}
+.header-description{
+    font-family: 'Charm', cursive;
+    font-weight: bold;
+    font-size: large;
+}
+h1 {
+    font-family: 'Charm', cursive;
+    color: #7E2C5B;
+}
+
+#cake-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cake-item {
+    position: relative;
+    border: 1px solid #D8BFD8;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cake-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#selected-cakes {
+    padding: 20px;
+    border-top: 2px solid #D8BFD8;
+    margin-top: 20px;
+}
+
+#selected-cakes fieldset {
+    border: 2px solid #D8BFD8; /* Border for the fieldset */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#selected-cakes legend {
+    font-weight: bold; /* Bold legend text */
+    padding: 0 10px; /* Add padding to the legend */
+    background-color: #FFF0F5; /* Match background color */
+}
+
+#selected-cake-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-cake-list li {
+    background-color: #FFF0F5;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#subtotal {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #7E2C5B;
+    text-align: right; 
+}
+.cake-item.selected {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.cake-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+<!--
+ Elizabeth House
+ Student ID 101465946
+ Lab 2
+ 01/17/2025
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: black 1px solid;
+            width: 70%;
+            height: 200px;
+            display: flex;
+            /*flex-direction: column;*/
+            /*flex-wrap: wrap;*/
+            flex-flow: row wrap;
+            /*justify-content: flex-end;*/
+            align-items: flex-end;
+        }
+
+        button {
+            font-size: 18px;
+        }
+
+        button:last-child {
+            order: -1;
+            align-self: flex-start;
+        }
+
+        button:nth-child(3) {
+            order: 1;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button>
+        <button>Button 5</button>
+    </div>
+</body>
+</html>

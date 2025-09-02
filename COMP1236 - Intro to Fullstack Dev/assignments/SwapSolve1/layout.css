@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+
+body
+{
+    background-color: #FFAFF0;
+}
+
+main
+{
+    font: 1.8vw 'Mountains of Christmas', serif;
+    width: 80%;
+    margin: 0 auto;
+    padding: 60px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Nav bar styling */
+ul
+{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #76E5FC;
+}
+
+li
+{
+    padding: 0 10px;
+}
+
+li a
+{
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: 2.0vw 'Updock', serif;
+}
+
+li a:hover
+{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dummy Images */
+.dummy-img
+{
+    width: 40%;
+}
+
+/* Center company image */
+#logo
+{
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 60px;
+}
+
+/* Set width for description boxes */
+.description
+{
+    border: 3px double #fed3f8;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
+
+/* Header and footer image banner */
+.banner
+{
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Footer styling */
+footer
+{
+    display: flex;
+    justify-content: center;
+    border: 3px solid #4BC0D9;
+    background-color: #76E5FC;
+}
+
+#footer-items
+{
+    font: 2.0vw 'Updock', serif;
+    padding: 5px;
+    border: 3px solid #fed3f8;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Flex box for form layout to stack fields and control form size */
+form
+{
+    font: 1.0vw 'Updock', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+input[type=text]
+{
+    padding: 20px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+}
+
+input[type=email]
+{
+    padding: 20px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+}
+
+input[type=submit]
+{
+    padding: 20px;
+    font-size: 0.8vw;
+    width: 10%;
+}
